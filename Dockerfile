@@ -13,6 +13,8 @@ RUN npm install
 # Salin seluruh kode aplikasi ke dalam container
 COPY . .
 
+ENV MODEL_URL="https://storage.googleapis.com/asclepius-model-anna-bucket/model-in-prod/model.json"
+
 # Expose port tempat aplikasi berjalan
 EXPOSE 8080
 

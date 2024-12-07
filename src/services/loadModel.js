@@ -10,7 +10,10 @@ async function loadModel() {
   }
 
   try {
-    return await tf.loadGraphModel(modelUrl);
+    const startTime = Date.now();
+    const model = await tf.loadGraphModel(modelUrl);
+    console.log(`Model loaded in ${(Date.now() - startTime) / 1000} seconds`);
+    return model;
   } catch (error) {
     console.error("Error loading model:", error);
     throw error;
