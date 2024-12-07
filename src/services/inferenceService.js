@@ -27,7 +27,7 @@ async function predictClassification(model, image) {
   let explanation, suggestion;
 
   // Tentukan ambang batas confidenceScore untuk mendeteksi kanker
-  const threshold = 60;
+  const threshold = 50;
 
   if (confidenceScore < threshold) {
     // Jika confidence score rendah, kita anggap sebagai non-cancer
